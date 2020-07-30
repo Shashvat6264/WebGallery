@@ -4,6 +4,10 @@ for (var i=0;i<items.length;i++){
     var item = items[i];
     var img = item.getElementsByTagName("img")[0];
     var overlay = item.getElementsByClassName("overlay")[0];
+    var link = img.src;
+    overlay.setAttribute("href",link);
+    var caption = overlay.getElementsByTagName("p")[0].innerHTML;
+    overlay.setAttribute("data-title", caption);
     var height = img.offsetHeight + "px";
     var width = img.offsetWidth + "px";
     overlay.style.height = height;
